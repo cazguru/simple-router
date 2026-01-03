@@ -1,4 +1,5 @@
 # Simple Router
+A Simple JavaScript Router Library
 
 ## Installation
 
