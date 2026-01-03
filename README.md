@@ -1,5 +1,5 @@
 # Simple Router
-A Simple JavaScript Router Library
+A Simple JavaScript Router Library, that lets you navigate between web pages without full page reload and converts your site to a Single Page Application 🤯
 
 ## Installation
 
