@@ -1,0 +1,28 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  padding: 20px;
+}
+nav {
+  margin-bottom: 20px;
+}
+nav a {
+  margin-right: 8px;
+  text-decoration: none;
+  color: #2a7ae2;
+}
+nav a.active {
+  font-weight: 700;
+  color: #0b3b8c;
+}
+.button {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #2a7ae2;
+  color: #fff;
+  text-decoration: none;
+}
+button {
+  padding: 6px 10px;
+}

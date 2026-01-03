@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple Router Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav data-preserve>
+      <a href="/" data-router>Home</a>
+      <a href="/about.html" data-router>About</a>
+      <a href="/contact.html" data-router>Contact</a>
+    </nav>
+
+    <main id="app">
+      <h1>Home</h1>
+      <p>
+        Welcome to the demo of the enhanced client-side router. Click links
+        above to navigate without a full reload. Try the search form or the
+        dynamic hello link below.
+      </p>
+
+      <p>
+        <a href="/about.html" data-router class="button" data-prefetch
+          >Go to About</a
+        >
+        <a href="/contact.html" data-router class="button">Contact Us</a>
+      </p>
+    </main>
+    <footer>&copy; 2026 Simple Router by Caz</footer>
+    <script src="router.js"></script>
+    <script>
+      // initialize the Router and register routes
+      Router.init({ container: "#app", linkSelector: "[data-router]" });
+    </script>
+  </body>
+</html>

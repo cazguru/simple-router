@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Simple Router Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header data-preserve>
+      <nav data-preserve>
+        <a href="/" data-router>Home</a>
+        <a href="/about.html" data-router>About</a>
+        <a href="/contact.html" data-router>Contact</a>
+      </nav>
+    </header>
+
+    <main id="app">
+      <h1>Contact</h1>
+      <p>
+        You can contact us at
+        <a href="mailto:demo@example.com">demo@example.com</a>.
+      </p>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          console.log("Contact page loaded and script ran");
+        });
+      </script>
+    </main>
+
+    <footer>&copy; 2026 Simple Router by Caz</footer>
+
+    <script src="router.js"></script>
+    <script>
+      // initialize the Router and register contact route
+      Router.init({ container: "#app", linkSelector: "[data-router]" });
+      Router.route("/contact", {
+        // demo: a POST to /contact would normally be handled server-side; this shows form interception
+        render: (data, ctx) =>
+          `\n          <h1>Contact</h1>\n          <p>Your message was received (demo).</p>\n        `,
+      });
+      Router.route("/contact.html", {
+        render: (data, ctx) =>
+          `\n          <h1>Contact</h1>\n          <p>Your message was received (demo).</p>\n        `,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — Simple Router Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav data-preserve>
+      <a href="/" data-router>Home</a>
+      <a href="/about.html" data-router>About</a>
+      <a href="/contact.html" data-router>Contact</a>
+    </nav>
+
+    <main id="app">
+      <h1>About</h1>
+      <p>
+        This is a simple page demonstrating client-side route swapping and
+        templates registered through the Router API.
+      </p>
+
+      <p>
+        <a href="/contact.html" data-router class="button">Contact us</a>
+      </p>
+    </main>
+
+    <footer>&copy; 2026 Simple Router by Caz</footer>
+
+    <script src="router.js"></script>
+    <script>
+      // initialize the Router and register the about route
+      Router.init({ container: "#app", linkSelector: "[data-router]" });
+    </script>
+  </body>
+</html>
